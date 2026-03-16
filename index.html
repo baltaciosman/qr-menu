@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kantin Ürünleri ve Fiyat Listesi</title>
+
+<style>
+body{
+background:#f4f6fb;
+font-family:Arial, Helvetica, sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+margin:0;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:18px;
+width:100%;
+max-width:420px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+margin:0 0 8px 0;
+font-size:28px;
+}
+
+.subtitle{
+text-align:center;
+color:#6b7280;
+font-size:14px;
+margin-bottom:22px;
+}
+
+.product{
+margin-bottom:12px;
+padding:14px 16px;
+border-radius:12px;
+background:#f7f7f7;
+border:1px solid #ececec;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+}
+
+.product-name{
+font-size:16px;
+font-weight:700;
+color:#111827;
+line-height:1.35;
+}
+
+.product-price{
+font-size:16px;
+font-weight:800;
+color:#1d4ed8;
+white-space:nowrap;
+}
+
+.note{
+margin-top:20px;
+background:#fff4e5;
+border:2px solid #f59e0b;
+color:#92400e;
+text-align:center;
+padding:16px;
+border-radius:12px;
+font-size:15px;
+font-weight:800;
+line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🍽 Ürünler ve Fiyatlar</h1>
+<p class="subtitle">Kantinde satışta olan yiyecekleri aşağıda görebilirsiniz.</p>
+
+<div id="product-list"></div>
+
+<div class="note">
+⚠️ Siparişinizi kantin kasasından verebilirsiniz.
+</div>
+
+</div>
+
+<script>
+
+fetch('products.json')
+.then(response => response.json())
+.then(products => {
+
+const productList = document.getElementById("product-list");
+
+products.forEach(product => {
+
+const div = document.createElement("div");
+div.className = "product";
+
+div.innerHTML = `
+<div class="product-name">${product.name}</div>
+<div class="product-price">${product.price} TL</div>
+`;
+
+productList.appendChild(div);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
