@@ -1,26 +1,29 @@
-[
-  {
-    "name": "Pilav üstü tavuk sote",
-    "price": 150
-  },
-  {
-    "name": "Patso",
-    "price": 100
-  },
-  {
-    "name": "Nugget'lı Patso",
-    "price": 130
-  },
-  {
-    "name": "Ekmek arası köfte",
-    "price": 150
-  },
-  {
-    "name": "Tost",
-    "price": 100
-  },
-  {
-    "name": "Günün çorbası",
-    "price": 80
-  }
-]
+{
+  "lastUpdate": "17 Mart 2026",
+  "products": [
+    {
+      "name": "Pilav üstü tavuk sote",
+      "price": 150
+    },
+    {
+      "name": "Patso",
+      "price": 100
+    },
+    {
+      "name": "Nugget'lı Patso",
+      "price": 140
+    },
+    {
+      "name": "Ekmek arası köfte",
+      "price": 150
+    },
+    {
+      "name": "Karışık Tost",
+      "price": 100
+    },
+    {
+      "name": "Günün çorbası",
+      "price": 80
+    }
+  ]
+}
